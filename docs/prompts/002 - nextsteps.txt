@@ -1,0 +1,7 @@
+save the generated spec doc as ask copilot to create 2 separate documents
+- requirements.md
+- design.md
+
+in the design ask it to add a architecture diagram
+- can you add a architecture diagram to the design to visualize the technical architecture and the pieces involved
+
