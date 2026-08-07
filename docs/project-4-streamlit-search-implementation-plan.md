@@ -66,58 +66,58 @@ Build a Streamlit application that enables users to query the platform, inspect 
 ## Milestone 3: Search Controls and Validation Workflows
 
 ### Task 3.1 Implement filters and validation utilities
-- [ ] Enable strategy, source type, and date-window filtering controls.
-- [ ] Add query history for current session.
-- [ ] Add export of response payload for debugging.
+- [x] Enable strategy, source type, and date-window filtering controls.
+- [x] Add query history for current session.
+- [x] Add export of response payload for debugging.
 
 #### Checkpoint tests
-- [ ] Filter behavior test confirming result set changes with each filter.
-- [ ] Export validity test ensuring exported payload is complete JSON.
+- [x] Filter behavior test confirming result set changes with each filter.
+- [x] Export validity test ensuring exported payload is complete JSON.
 
 #### Pass criteria
-- [ ] Filters map correctly to API parameters.
-- [ ] Exported payload is valid and reproducible for bug reports.
+- [x] Filters map correctly to API parameters.
+- [x] Exported payload is valid and reproducible for bug reports.
 
 ### Task 3.2 Implement quality review workflow
-- [ ] Add thumbs-up or thumbs-down relevance marker per result.
-- [ ] Store local feedback records for evaluation export.
-- [ ] Add simple review summary view for current session.
+- [x] Add thumbs-up or thumbs-down relevance marker per result.
+- [x] Store local feedback records for evaluation export.
+- [x] Add simple review summary view for current session.
 
 #### Checkpoint tests
-- [ ] Feedback capture test for positive and negative marks.
-- [ ] Session summary accuracy test for counts and percentages.
+- [x] Feedback capture test for positive and negative marks.
+- [x] Session summary accuracy test for counts and percentages.
 
 #### Pass criteria
-- [ ] Feedback actions are recorded reliably.
-- [ ] Summary metrics match captured events.
+- [x] Feedback actions are recorded reliably.
+- [x] Summary metrics match captured events.
 
 ## Milestone 4: End-to-End Readiness and Release
 
 ### Task 4.1 Integrate with live FastAPI service
-- [ ] Validate compatibility with retrieval endpoints from FastAPI Backend Vector Manager (Project 3).
-- [ ] Validate support for backend mode differences where relevant.
-- [ ] Add resilient fallback messaging for partial service degradation.
+- [x] Validate compatibility with retrieval endpoints from FastAPI Backend Vector Manager (Project 3).
+- [x] Validate support for backend mode differences where relevant.
+- [x] Add resilient fallback messaging for partial service degradation.
 
 #### Checkpoint tests
-- [ ] Live integration test using seeded fixtures and expected top-k behavior.
-- [ ] Degradation test with unavailable backend dependency.
+- [x] Live integration test using seeded fixtures and expected top-k behavior.
+- [x] Degradation test with unavailable backend dependency.
 
 #### Pass criteria
-- [ ] Live query path works under normal conditions.
-- [ ] Degraded states are handled with clear user messaging.
+- [x] Live query path works under normal conditions.
+- [x] Degraded states are handled with clear user messaging.
 
 ### Task 4.2 Release candidate checkpoint
-- [ ] Publish usage guide for developers and reviewers.
-- [ ] Freeze UI response model for first release.
-- [ ] Execute end-to-end test from ingestion completion to search validation.
+- [x] Publish usage guide for developers and reviewers.
+- [x] Freeze UI response model for first release.
+- [x] Execute end-to-end test from ingestion completion to search validation.
 
 #### Checkpoint tests
-- [ ] End-to-end acceptance test with fixture corpus from Document Transformation and Chunking Service (Project 1) and Project 2 pipeline.
-- [ ] Regression suite test for critical UI flows.
+- [x] End-to-end acceptance test with fixture corpus from Document Transformation and Chunking Service (Project 1) and Project 2 pipeline.
+- [x] Regression suite test for critical UI flows.
 
 #### Pass criteria
-- [ ] End-to-end acceptance path is green.
-- [ ] No critical regressions remain in query, render, filter, or feedback paths.
+- [x] End-to-end acceptance path is green.
+- [x] No critical regressions remain in query, render, filter, or feedback paths.
 
 ## Exit Criteria
 1. All milestone checkpoint tests pass.

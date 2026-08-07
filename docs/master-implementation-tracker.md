@@ -74,19 +74,19 @@ Test gate:
 - [x] Streamlit UI and RAG (Project 4) client contract and rendering/provenance tests are green.
 
 ### Wave 4: End-to-End Hardening and Release
-- [ ] Document Transformation and Chunking Service (Project 1) Milestone 4 complete
-- [ ] Project 2 Milestone 4 complete
-- [ ] FastAPI Backend Vector Manager (Project 3) Milestone 4 complete
-- [ ] Streamlit UI and RAG (Project 4) Milestone 3 and Milestone 4 complete
+- [x] Document Transformation and Chunking Service (Project 1) Milestone 4 complete
+- [x] Project 2 Milestone 4 complete
+- [x] FastAPI Backend Vector Manager (Project 3) Milestone 4 complete
+- [x] Streamlit UI and RAG (Project 4) Milestone 3 and Milestone 4 complete
 
 Exit gate:
-- [ ] All projects pass release candidate checkpoints.
-- [ ] Interoperability across ingest, storage, search, and UI is stable.
+- [x] All projects pass release candidate checkpoints.
+- [x] Interoperability across ingest, storage, search, and UI is stable.
 
 Test gate:
-- [ ] End-to-end ingest -> index -> query -> update -> delete acceptance suite is green.
-- [ ] Mode parity checks pass for PostgreSQL-only, Qdrant-only, and combined modes where supported.
-- [ ] Recovery drill from interrupted ingestion run passes without duplicate active records.
+- [x] End-to-end ingest -> index -> query -> update -> delete acceptance suite is green.
+- [x] Mode parity checks pass for PostgreSQL-only, Qdrant-only, and combined modes where supported.
+- [x] Recovery drill from interrupted ingestion run passes without duplicate active records.
 
 ## Critical Path
 1. Document Transformation and Chunking Service (Project 1) Milestone 1 -> Project 2 Milestone 1
@@ -108,25 +108,25 @@ Use this checklist to track progress by wave and project.
 - [x] Wave 1 complete
 - [x] Wave 2 complete
 - [x] Wave 3 complete
-- [ ] Wave 4 complete
+- [x] Wave 4 complete
 
 ### Project Milestone Status
 - [x] Document Transformation and Chunking Service (Project 1) Milestone 1 complete
 - [x] Document Transformation and Chunking Service (Project 1) Milestone 2 complete
 - [x] Document Transformation and Chunking Service (Project 1) Milestone 3 complete
-- [ ] Document Transformation and Chunking Service (Project 1) Milestone 4 complete
+- [x] Document Transformation and Chunking Service (Project 1) Milestone 4 complete
 - [x] Project 2 Milestone 1 complete
 - [x] Project 2 Milestone 2 complete
 - [x] Project 2 Milestone 3 complete
-- [ ] Project 2 Milestone 4 complete
+- [x] Project 2 Milestone 4 complete
 - [x] FastAPI Backend Vector Manager (Project 3) Milestone 1 complete
 - [x] FastAPI Backend Vector Manager (Project 3) Milestone 2 complete
 - [x] FastAPI Backend Vector Manager (Project 3) Milestone 3 complete
-- [ ] FastAPI Backend Vector Manager (Project 3) Milestone 4 complete
+- [x] FastAPI Backend Vector Manager (Project 3) Milestone 4 complete
 - [x] Streamlit UI and RAG (Project 4) Milestone 1 complete
 - [x] Streamlit UI and RAG (Project 4) Milestone 2 complete
-- [ ] Streamlit UI and RAG (Project 4) Milestone 3 complete
-- [ ] Streamlit UI and RAG (Project 4) Milestone 4 complete
+- [x] Streamlit UI and RAG (Project 4) Milestone 3 complete
+- [x] Streamlit UI and RAG (Project 4) Milestone 4 complete
 
 ## Change Control Rules
 - Any contract change in Document Transformation and Chunking Service (Project 1) or FastAPI Backend Vector Manager (Project 3) requires re-running Project 2 integration tests.

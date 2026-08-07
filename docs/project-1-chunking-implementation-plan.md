@@ -115,30 +115,30 @@ For LLM-backed derivative artifacts, the implementation shall use the Ollama mod
 ## Milestone 4: Quality Gates and Release Readiness
 
 ### Task 4.1 Add quality and regression suite
-- [ ] Add representative fixture documents for at least three content types.
-- [ ] Add regression tests for artifact counts and metadata completeness.
-- [ ] Add smoke benchmark for per-document processing time.
+- [x] Add representative fixture documents for at least three content types.
+- [x] Add regression tests for artifact counts and metadata completeness.
+- [x] Add smoke benchmark for per-document processing time.
 
 #### Checkpoint tests
-- [ ] Regression suite run with baseline snapshots.
-- [ ] Metadata completeness test requiring 100 percent required field coverage.
+- [x] Regression suite run with baseline snapshots.
+- [x] Metadata completeness test requiring 100 percent required field coverage.
 
 #### Pass criteria
-- [ ] Baseline regression tests are green.
-- [ ] Metadata completeness is 100 percent for required fields.
+- [x] Baseline regression tests are green.
+- [x] Metadata completeness is 100 percent for required fields.
 
 ### Task 4.2 Release candidate checkpoint
-- [ ] Publish implementation notes and configuration defaults.
-- [ ] Freeze strategy version identifiers for downstream compatibility.
-- [ ] Produce handoff package for Project 2 integration.
+- [x] Publish implementation notes and configuration defaults.
+- [x] Freeze strategy version identifiers for downstream compatibility.
+- [x] Produce handoff package for Project 2 integration.
 
 #### Checkpoint tests
-- [ ] Integration handshake test with Project 2 input validator.
-- [ ] Configuration sanity test across default and one alternate profile.
+- [x] Integration handshake test with Project 2 input validator.
+- [x] Configuration sanity test across default and one alternate profile.
 
 #### Pass criteria
-- [ ] Handoff payload is accepted by Project 2 validators.
-- [ ] Configuration profiles load without runtime errors.
+- [x] Handoff payload is accepted by Project 2 validators.
+- [x] Configuration profiles load without runtime errors.
 
 ## Exit Criteria
 1. All milestone checkpoint tests pass.
