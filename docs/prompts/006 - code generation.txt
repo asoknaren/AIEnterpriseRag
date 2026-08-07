@@ -7,3 +7,4 @@ add gitignore to every project
 
 lets start with wave 1 - everytime you finish a milestone ensure to get approval from me before starting the next milestone
 
+update the checklist of both master and projects - end fo every milestone
