@@ -1,0 +1,25 @@
+{
+  "artifact_id": "a-qa-001",
+  "artifact_type": "qa_pairs",
+  "schema_version": "1.0.0",
+  "strategy_version": "1.0.0",
+  "content": "Q and A",
+  "document": {
+    "document_id": "doc-004",
+    "source_uri": "https://example.com/d.pdf",
+    "source_type": "pdf"
+  },
+  "lineage": {
+    "source_ref": "p2:l4-8"
+  },
+  "processing": {
+    "ingestion_run_id": "run-004",
+    "chunk_strategy": "qa",
+    "chunk_strategy_version": "1.0.0"
+  },
+  "extension": {
+    "question": "What is the policy?",
+    "answer": "Policy is defined in section 2.",
+    "confidence": 0.92
+  }
+}

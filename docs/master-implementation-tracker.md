@@ -27,66 +27,66 @@ This tracker links all project-level implementation plans and defines cross-proj
 ## Milestone Synchronization Plan
 
 ### Wave 1: Contract and Foundation Alignment
-- Document Transformation and Chunking Service (Project 1) Milestone 1
-- FastAPI Backend Vector Manager (Project 3) Milestone 1
-- Project 2 Milestone 1
+- [x] Document Transformation and Chunking Service (Project 1) Milestone 1 complete
+- [x] FastAPI Backend Vector Manager (Project 3) Milestone 1 complete
+- [x] Project 2 Milestone 1 complete
 
 Exit gate:
-- Document Transformation and Chunking Service (Project 1) artifact contract and FastAPI Backend Vector Manager (Project 3) API contract are stable.
-- Project 2 can validate and map Document Transformation and Chunking Service (Project 1) output to FastAPI Backend Vector Manager (Project 3) input.
+- [x] Document Transformation and Chunking Service (Project 1) artifact contract and FastAPI Backend Vector Manager (Project 3) API contract are stable.
+- [x] Project 2 can validate and map Document Transformation and Chunking Service (Project 1) output to FastAPI Backend Vector Manager (Project 3) input.
 
 Test gate:
-- Document Transformation and Chunking Service (Project 1) contract validation tests are green.
-- FastAPI Backend Vector Manager (Project 3) route and model validation tests are green.
-- Project 2 intake schema and field parity tests are green.
+- [x] Document Transformation and Chunking Service (Project 1) contract validation tests are green.
+- [x] FastAPI Backend Vector Manager (Project 3) route and model validation tests are green.
+- [x] Project 2 intake schema and field parity tests are green.
 
 ### Wave 2: Core Processing and Persistence
-- Document Transformation and Chunking Service (Project 1) Milestone 2
-- FastAPI Backend Vector Manager (Project 3) Milestone 2
-- Project 2 Milestone 2
+- [ ] Document Transformation and Chunking Service (Project 1) Milestone 2 complete
+- [ ] FastAPI Backend Vector Manager (Project 3) Milestone 2 complete
+- [ ] Project 2 Milestone 2 complete
 
 Exit gate:
-- Document Transformation and Chunking Service (Project 1) emits complete strategy outputs.
-- Project 2 performs idempotent submission without embeddings.
-- FastAPI Backend Vector Manager (Project 3) performs CRUD and metadata lifecycle behavior.
+- [ ] Document Transformation and Chunking Service (Project 1) emits complete strategy outputs.
+- [ ] Project 2 performs idempotent submission without embeddings.
+- [ ] FastAPI Backend Vector Manager (Project 3) performs CRUD and metadata lifecycle behavior.
 
 Test gate:
-- Document Transformation and Chunking Service (Project 1) strategy-level tests are green.
-- Project 2 replay and change-detection tests are green.
-- FastAPI Backend Vector Manager (Project 3) CRUD and transaction integrity tests are green.
+- [ ] Document Transformation and Chunking Service (Project 1) strategy-level tests are green.
+- [ ] Project 2 replay and change-detection tests are green.
+- [ ] FastAPI Backend Vector Manager (Project 3) CRUD and transaction integrity tests are green.
 
 ### Wave 3: Search Readiness and Reliability
-- Document Transformation and Chunking Service (Project 1) Milestone 3
-- FastAPI Backend Vector Manager (Project 3) Milestone 3
-- Project 2 Milestone 3
-- Streamlit UI and RAG (Project 4) Milestone 1 and Milestone 2
+- [ ] Document Transformation and Chunking Service (Project 1) Milestone 3 complete
+- [ ] FastAPI Backend Vector Manager (Project 3) Milestone 3 complete
+- [ ] Project 2 Milestone 3 complete
+- [ ] Streamlit UI and RAG (Project 4) Milestone 1 and Milestone 2 complete
 
 Exit gate:
-- Document Transformation and Chunking Service (Project 1) exports ingestion-ready bundles.
-- FastAPI Backend Vector Manager (Project 3) generates embeddings and serves retrieval APIs.
-- Project 2 handles retries and emits run telemetry.
-- Streamlit UI and RAG (Project 4) renders ranked results and provenance.
+- [ ] Document Transformation and Chunking Service (Project 1) exports ingestion-ready bundles.
+- [ ] FastAPI Backend Vector Manager (Project 3) generates embeddings and serves retrieval APIs.
+- [ ] Project 2 handles retries and emits run telemetry.
+- [ ] Streamlit UI and RAG (Project 4) renders ranked results and provenance.
 
 Test gate:
-- Document Transformation and Chunking Service (Project 1) bundle contract and checksum reproducibility tests are green.
-- FastAPI Backend Vector Manager (Project 3) embedding and retrieval tests are green.
-- Project 2 retry/dead-letter and lifecycle metrics tests are green.
-- Streamlit UI and RAG (Project 4) client contract and rendering/provenance tests are green.
+- [ ] Document Transformation and Chunking Service (Project 1) bundle contract and checksum reproducibility tests are green.
+- [ ] FastAPI Backend Vector Manager (Project 3) embedding and retrieval tests are green.
+- [ ] Project 2 retry/dead-letter and lifecycle metrics tests are green.
+- [ ] Streamlit UI and RAG (Project 4) client contract and rendering/provenance tests are green.
 
 ### Wave 4: End-to-End Hardening and Release
-- Document Transformation and Chunking Service (Project 1) Milestone 4
-- Project 2 Milestone 4
-- FastAPI Backend Vector Manager (Project 3) Milestone 4
-- Streamlit UI and RAG (Project 4) Milestone 3 and Milestone 4
+- [ ] Document Transformation and Chunking Service (Project 1) Milestone 4 complete
+- [ ] Project 2 Milestone 4 complete
+- [ ] FastAPI Backend Vector Manager (Project 3) Milestone 4 complete
+- [ ] Streamlit UI and RAG (Project 4) Milestone 3 and Milestone 4 complete
 
 Exit gate:
-- All projects pass release candidate checkpoints.
-- Interoperability across ingest, storage, search, and UI is stable.
+- [ ] All projects pass release candidate checkpoints.
+- [ ] Interoperability across ingest, storage, search, and UI is stable.
 
 Test gate:
-- End-to-end ingest -> index -> query -> update -> delete acceptance suite is green.
-- Mode parity checks pass for PostgreSQL-only, Qdrant-only, and combined modes where supported.
-- Recovery drill from interrupted ingestion run passes without duplicate active records.
+- [ ] End-to-end ingest -> index -> query -> update -> delete acceptance suite is green.
+- [ ] Mode parity checks pass for PostgreSQL-only, Qdrant-only, and combined modes where supported.
+- [ ] Recovery drill from interrupted ingestion run passes without duplicate active records.
 
 ## Critical Path
 1. Document Transformation and Chunking Service (Project 1) Milestone 1 -> Project 2 Milestone 1
@@ -105,21 +105,21 @@ Test gate:
 Use this checklist to track progress by wave and project.
 
 ### Wave Status
-- [ ] Wave 1 complete
+- [x] Wave 1 complete
 - [ ] Wave 2 complete
 - [ ] Wave 3 complete
 - [ ] Wave 4 complete
 
 ### Project Milestone Status
-- [ ] Document Transformation and Chunking Service (Project 1) Milestone 1 complete
+- [x] Document Transformation and Chunking Service (Project 1) Milestone 1 complete
 - [ ] Document Transformation and Chunking Service (Project 1) Milestone 2 complete
 - [ ] Document Transformation and Chunking Service (Project 1) Milestone 3 complete
 - [ ] Document Transformation and Chunking Service (Project 1) Milestone 4 complete
-- [ ] Project 2 Milestone 1 complete
+- [x] Project 2 Milestone 1 complete
 - [ ] Project 2 Milestone 2 complete
 - [ ] Project 2 Milestone 3 complete
 - [ ] Project 2 Milestone 4 complete
-- [ ] FastAPI Backend Vector Manager (Project 3) Milestone 1 complete
+- [x] FastAPI Backend Vector Manager (Project 3) Milestone 1 complete
 - [ ] FastAPI Backend Vector Manager (Project 3) Milestone 2 complete
 - [ ] FastAPI Backend Vector Manager (Project 3) Milestone 3 complete
 - [ ] FastAPI Backend Vector Manager (Project 3) Milestone 4 complete

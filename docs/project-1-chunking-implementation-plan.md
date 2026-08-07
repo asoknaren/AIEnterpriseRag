@@ -12,30 +12,30 @@ For LLM-backed derivative artifacts, the implementation shall use the Ollama mod
 ## Milestone 1: Contracts and Preprocessing Foundation
 
 ### Task 1.1 Define canonical artifact contract
-- [ ] Define required fields for document, artifact, lineage, and processing metadata.
-- [ ] Define strategy-specific extension fields for all six artifact types.
-- [ ] Define versioning fields for schema and strategy implementation.
+- [x] Define required fields for document, artifact, lineage, and processing metadata.
+- [x] Define strategy-specific extension fields for all six artifact types.
+- [x] Define versioning fields for schema and strategy implementation.
 
 #### Checkpoint tests
-- [ ] Contract validation test: feed one valid artifact JSON per strategy and assert schema validation passes.
-- [ ] Negative validation test: remove one required field and assert validation fails with clear error location.
+- [x] Contract validation test: feed one valid artifact JSON per strategy and assert schema validation passes.
+- [x] Negative validation test: remove one required field and assert validation fails with clear error location.
 
 #### Pass criteria
-- [ ] All six valid payload samples pass schema validation.
-- [ ] All invalid payload samples fail with deterministic error messages.
+- [x] All six valid payload samples pass schema validation.
+- [x] All invalid payload samples fail with deterministic error messages.
 
 ### Task 1.2 Build Docling-based raw document conversion pipeline
-- [ ] Implement Docling ingestion for PDF, DOC/DOCX, and HTML source files.
-- [ ] Convert extracted content to clean Markdown while preserving headings, lists, tables, links, and basic structural cues.
-- [ ] Preserve mapping from normalized Markdown spans back to original source positions and page/section references.
+- [x] Implement Docling ingestion for PDF, DOC/DOCX, and HTML source files.
+- [x] Convert extracted content to clean Markdown while preserving headings, lists, tables, links, and basic structural cues.
+- [x] Preserve mapping from normalized Markdown spans back to original source positions and page/section references.
 
 #### Checkpoint tests
-- [ ] Conversion test: one sample PDF, one DOC/DOCX, and one HTML file each convert to valid Markdown.
-- [ ] Structure preservation test: headings, list items, and tables remain identifiable in converted output.
+- [x] Conversion test: one sample PDF, one DOC/DOCX, and one HTML file each convert to valid Markdown.
+- [x] Structure preservation test: headings, list items, and tables remain identifiable in converted output.
 
 #### Pass criteria
-- [ ] All supported input formats convert successfully into Markdown.
-- [ ] Source position mapping is correct for at least three representative document samples.
+- [x] All supported input formats convert successfully into Markdown.
+- [x] Source position mapping is correct for at least three representative document samples.
 
 ## Milestone 2: Strategy Implementations
 

@@ -1,0 +1,29 @@
+{
+  "artifact_id": "a-sem-001",
+  "artifact_type": "semantic_chunk",
+  "schema_version": "1.0.0",
+  "strategy_version": "1.0.0",
+  "content": "Semantic chunk text",
+  "document": {
+    "document_id": "doc-001",
+    "source_uri": "https://example.com/a.pdf",
+    "source_type": "pdf",
+    "title": "Doc A"
+  },
+  "lineage": {
+    "source_ref": "p1:l1-5",
+    "page_number": 1,
+    "section_ref": "Intro"
+  },
+  "processing": {
+    "ingestion_run_id": "run-001",
+    "chunk_strategy": "semantic",
+    "chunk_strategy_version": "1.0.0",
+    "processing_status": "completed"
+  },
+  "extension": {
+    "token_count": 42,
+    "start_offset": 0,
+    "end_offset": 210
+  }
+}

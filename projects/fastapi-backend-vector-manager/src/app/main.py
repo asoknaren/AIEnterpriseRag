@@ -1,0 +1,42 @@
+from __future__ import annotations
+
+from uuid import uuid4
+
+from fastapi import FastAPI, Request
+from fastapi.exceptions import RequestValidationError
+from fastapi.responses import JSONResponse
+
+from app.api.v1.routes_artifacts import router as artifacts_router
+from app.api.v1.routes_documents import router as documents_router
+from app.api.v1.routes_ops import router as ops_router
+from app.config.settings import AppSettings
+from app.models.errors import ErrorEnvelope
+from app.runtime.mode_selector import select_adapters
+
+
+def create_app() -> FastAPI:
+    settings = AppSettings.from_env()
+
+    app = FastAPI(title="FastAPI Backend Vector Manager", version="0.1.0")
+    app.state.active_mode = settings.profile
+    app.state.adapters = select_adapters(settings.profile)
+
+    app.include_router(documents_router)
+    app.include_router(artifacts_router)
+    app.include_router(ops_router)
+
+    @app.exception_handler(RequestValidationError)
+    async def validation_exception_handler(request: Request, exc: RequestValidationError) -> JSONResponse:
+        trace_id = str(uuid4())
+        envelope = ErrorEnvelope(
+            trace_id=trace_id,
+            error_code="request_validation_error",
+            message="Request body validation failed",
+            details=exc.errors(),
+        )
+        return JSONResponse(status_code=422, content=envelope.model_dump())
+
+    return app
+
+
+app = create_app()
