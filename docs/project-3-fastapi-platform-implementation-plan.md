@@ -66,43 +66,43 @@ Build the central FastAPI platform service that exposes CRUD and retrieval APIs,
 ## Milestone 3: Embedding Pipeline, Vector Retrieval, and Search APIs
 
 ### Task 3.1 Implement embedding generation pipeline
-- [ ] Implement provider-agnostic embedding adapter inside FastAPI.
-- [ ] Add batching, rate-limit handling, and retry policy for embedding calls.
-- [ ] Persist embedding model metadata alongside generated vectors.
+- [x] Implement provider-agnostic embedding adapter inside FastAPI.
+- [x] Add batching, rate-limit handling, and retry policy for embedding calls.
+- [x] Persist embedding model metadata alongside generated vectors.
 
 #### Checkpoint tests
-- [ ] Embedding contract test with mock provider and one real provider profile.
-- [ ] Determinism test for unchanged input, ensuring stable vector count and mapping.
+- [x] Embedding contract test with mock provider and one real provider profile.
+- [x] Determinism test for unchanged input, ensuring stable vector count and mapping.
 
 #### Pass criteria
-- [ ] FastAPI can generate embeddings from ingestion payload text without Project 2 embedding input.
-- [ ] Embedding metadata is captured and queryable per artifact.
+- [x] FastAPI can generate embeddings from ingestion payload text without Project 2 embedding input.
+- [x] Embedding metadata is captured and queryable per artifact.
 
 ### Task 3.2 Implement Qdrant adapter and vector upsert path
-- [ ] Add vector collection initialization logic.
-- [ ] Implement upsert for FastAPI-generated vectors and payload metadata.
-- [ ] Implement delete and update operations for vector records.
+- [x] Add vector collection initialization logic.
+- [x] Implement upsert for FastAPI-generated vectors and payload metadata.
+- [x] Implement delete and update operations for vector records.
 
 #### Checkpoint tests
-- [ ] Vector upsert test with known embeddings and payload attributes.
-- [ ] Vector delete test ensuring removed points are not returned in search.
+- [x] Vector upsert test with known embeddings and payload attributes.
+- [x] Vector delete test ensuring removed points are not returned in search.
 
 #### Pass criteria
-- [ ] Upsert and delete behavior is correct in repeated runs.
-- [ ] Payload metadata is queryable for filter scenarios.
+- [x] Upsert and delete behavior is correct in repeated runs.
+- [x] Payload metadata is queryable for filter scenarios.
 
 ### Task 3.3 Implement retrieval endpoints
-- [ ] Implement vector similarity search endpoint.
-- [ ] Implement metadata-filtered retrieval endpoint.
-- [ ] Implement source-context enrichment in response payload.
+- [x] Implement vector similarity search endpoint.
+- [x] Implement metadata-filtered retrieval endpoint.
+- [x] Implement source-context enrichment in response payload.
 
 #### Checkpoint tests
-- [ ] Relevance smoke test with seeded fixture vectors and expected top-k membership.
-- [ ] Filter correctness test with strategy and source metadata predicates.
+- [x] Relevance smoke test with seeded fixture vectors and expected top-k membership.
+- [x] Filter correctness test with strategy and source metadata predicates.
 
 #### Pass criteria
-- [ ] Top-k results include expected seeded neighbors.
-- [ ] Filters constrain results correctly without leakage.
+- [x] Top-k results include expected seeded neighbors.
+- [x] Filters constrain results correctly without leakage.
 
 ## Milestone 4: Operations, Security Baseline, and Release
 

@@ -56,22 +56,22 @@ Test gate:
 - [x] FastAPI Backend Vector Manager (Project 3) CRUD and transaction integrity tests are green.
 
 ### Wave 3: Search Readiness and Reliability
-- [ ] Document Transformation and Chunking Service (Project 1) Milestone 3 complete
-- [ ] FastAPI Backend Vector Manager (Project 3) Milestone 3 complete
-- [ ] Project 2 Milestone 3 complete
-- [ ] Streamlit UI and RAG (Project 4) Milestone 1 and Milestone 2 complete
+- [x] Document Transformation and Chunking Service (Project 1) Milestone 3 complete
+- [x] FastAPI Backend Vector Manager (Project 3) Milestone 3 complete
+- [x] Project 2 Milestone 3 complete
+- [x] Streamlit UI and RAG (Project 4) Milestone 1 and Milestone 2 complete
 
 Exit gate:
-- [ ] Document Transformation and Chunking Service (Project 1) exports ingestion-ready bundles.
-- [ ] FastAPI Backend Vector Manager (Project 3) generates embeddings and serves retrieval APIs.
-- [ ] Project 2 handles retries and emits run telemetry.
-- [ ] Streamlit UI and RAG (Project 4) renders ranked results and provenance.
+- [x] Document Transformation and Chunking Service (Project 1) exports ingestion-ready bundles.
+- [x] FastAPI Backend Vector Manager (Project 3) generates embeddings and serves retrieval APIs.
+- [x] Project 2 handles retries and emits run telemetry.
+- [x] Streamlit UI and RAG (Project 4) renders ranked results and provenance.
 
 Test gate:
-- [ ] Document Transformation and Chunking Service (Project 1) bundle contract and checksum reproducibility tests are green.
-- [ ] FastAPI Backend Vector Manager (Project 3) embedding and retrieval tests are green.
-- [ ] Project 2 retry/dead-letter and lifecycle metrics tests are green.
-- [ ] Streamlit UI and RAG (Project 4) client contract and rendering/provenance tests are green.
+- [x] Document Transformation and Chunking Service (Project 1) bundle contract and checksum reproducibility tests are green.
+- [x] FastAPI Backend Vector Manager (Project 3) embedding and retrieval tests are green.
+- [x] Project 2 retry/dead-letter and lifecycle metrics tests are green.
+- [x] Streamlit UI and RAG (Project 4) client contract and rendering/provenance tests are green.
 
 ### Wave 4: End-to-End Hardening and Release
 - [ ] Document Transformation and Chunking Service (Project 1) Milestone 4 complete
@@ -107,24 +107,24 @@ Use this checklist to track progress by wave and project.
 ### Wave Status
 - [x] Wave 1 complete
 - [x] Wave 2 complete
-- [ ] Wave 3 complete
+- [x] Wave 3 complete
 - [ ] Wave 4 complete
 
 ### Project Milestone Status
 - [x] Document Transformation and Chunking Service (Project 1) Milestone 1 complete
 - [x] Document Transformation and Chunking Service (Project 1) Milestone 2 complete
-- [ ] Document Transformation and Chunking Service (Project 1) Milestone 3 complete
+- [x] Document Transformation and Chunking Service (Project 1) Milestone 3 complete
 - [ ] Document Transformation and Chunking Service (Project 1) Milestone 4 complete
 - [x] Project 2 Milestone 1 complete
 - [x] Project 2 Milestone 2 complete
-- [ ] Project 2 Milestone 3 complete
+- [x] Project 2 Milestone 3 complete
 - [ ] Project 2 Milestone 4 complete
 - [x] FastAPI Backend Vector Manager (Project 3) Milestone 1 complete
 - [x] FastAPI Backend Vector Manager (Project 3) Milestone 2 complete
-- [ ] FastAPI Backend Vector Manager (Project 3) Milestone 3 complete
+- [x] FastAPI Backend Vector Manager (Project 3) Milestone 3 complete
 - [ ] FastAPI Backend Vector Manager (Project 3) Milestone 4 complete
-- [ ] Streamlit UI and RAG (Project 4) Milestone 1 complete
-- [ ] Streamlit UI and RAG (Project 4) Milestone 2 complete
+- [x] Streamlit UI and RAG (Project 4) Milestone 1 complete
+- [x] Streamlit UI and RAG (Project 4) Milestone 2 complete
 - [ ] Streamlit UI and RAG (Project 4) Milestone 3 complete
 - [ ] Streamlit UI and RAG (Project 4) Milestone 4 complete
 

@@ -10,58 +10,58 @@ Build a Streamlit application that enables users to query the platform, inspect 
 ## Milestone 1: UI Foundation and API Connectivity
 
 ### Task 1.1 Build base Streamlit layout and query controls
-- [ ] Create layout for query input, parameter controls, and response state.
-- [ ] Add controls for top-k, strategy filter, and source filter placeholders.
-- [ ] Add visible loading and error states.
+- [x] Create layout for query input, parameter controls, and response state.
+- [x] Add controls for top-k, strategy filter, and source filter placeholders.
+- [x] Add visible loading and error states.
 
 #### Checkpoint tests
-- [ ] UI smoke test verifying all controls render.
-- [ ] Interaction test verifying query submit action is triggered.
+- [x] UI smoke test verifying all controls render.
+- [x] Interaction test verifying query submit action is triggered.
 
 #### Pass criteria
-- [ ] All expected controls render in default view.
-- [ ] Submit action transitions to loading then response or error state.
+- [x] All expected controls render in default view.
+- [x] Submit action transitions to loading then response or error state.
 
 ### Task 1.2 Implement FastAPI client and request wiring
-- [ ] Build API client abstraction with timeout and retry policy.
-- [ ] Implement request serialization for query and filters.
-- [ ] Parse response into UI-friendly data model.
+- [x] Build API client abstraction with timeout and retry policy.
+- [x] Implement request serialization for query and filters.
+- [x] Parse response into UI-friendly data model.
 
 #### Checkpoint tests
-- [ ] Client contract test against mocked API responses.
-- [ ] Timeout and error handling test with simulated network delay and 5xx errors.
+- [x] Client contract test against mocked API responses.
+- [x] Timeout and error handling test with simulated network delay and 5xx errors.
 
 #### Pass criteria
-- [ ] Client can parse successful responses and surface errors cleanly.
-- [ ] Network failures produce user-visible, actionable messages.
+- [x] Client can parse successful responses and surface errors cleanly.
+- [x] Network failures produce user-visible, actionable messages.
 
 ## Milestone 2: Result Rendering and Provenance
 
 ### Task 2.1 Implement ranked result cards
-- [ ] Render ranked list with score, artifact type, and source identifier.
-- [ ] Add expandable content view for chunk text.
-- [ ] Add token or length indicators for result context size.
+- [x] Render ranked list with score, artifact type, and source identifier.
+- [x] Add expandable content view for chunk text.
+- [x] Add token or length indicators for result context size.
 
 #### Checkpoint tests
-- [ ] Rendering test for empty, single-result, and multi-result states.
-- [ ] Ranking order test ensuring UI preserves backend ranking sequence.
+- [x] Rendering test for empty, single-result, and multi-result states.
+- [x] Ranking order test ensuring UI preserves backend ranking sequence.
 
 #### Pass criteria
-- [ ] Result cards render correctly across all baseline states.
-- [ ] Ranking order in UI matches API response order.
+- [x] Result cards render correctly across all baseline states.
+- [x] Ranking order in UI matches API response order.
 
 ### Task 2.2 Implement provenance and lineage views
-- [ ] Show strategy type and strategy version for each result.
-- [ ] Show document-level provenance fields including source and section markers.
-- [ ] Add optional drill-down for related artifacts where available.
+- [x] Show strategy type and strategy version for each result.
+- [x] Show document-level provenance fields including source and section markers.
+- [x] Add optional drill-down for related artifacts where available.
 
 #### Checkpoint tests
-- [ ] Provenance completeness test requiring all required lineage fields in rendered view.
-- [ ] Drill-down behavior test for related artifact links.
+- [x] Provenance completeness test requiring all required lineage fields in rendered view.
+- [x] Drill-down behavior test for related artifact links.
 
 #### Pass criteria
-- [ ] Users can inspect origin and strategy metadata for each result.
-- [ ] Lineage drill-down works for samples with related artifacts.
+- [x] Users can inspect origin and strategy metadata for each result.
+- [x] Lineage drill-down works for samples with related artifacts.
 
 ## Milestone 3: Search Controls and Validation Workflows
 

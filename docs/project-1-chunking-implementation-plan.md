@@ -87,30 +87,30 @@ For LLM-backed derivative artifacts, the implementation shall use the Ollama mod
 ## Milestone 3: Orchestration and Packaging
 
 ### Task 3.1 Build multi-strategy execution orchestrator
-- [ ] Create run coordinator that executes all six strategies per document.
-- [ ] Add per-strategy timeout and retry policy.
-- [ ] Emit strategy-level status for success, partial failure, and failure.
+- [x] Create run coordinator that executes all six strategies per document.
+- [x] Add per-strategy timeout and retry policy.
+- [x] Emit strategy-level status for success, partial failure, and failure.
 
 #### Checkpoint tests
-- [ ] Orchestration test: one sample document yields outputs for all six strategies.
-- [ ] Failure isolation test: forced failure in one strategy does not suppress outputs of successful strategies.
+- [x] Orchestration test: one sample document yields outputs for all six strategies.
+- [x] Failure isolation test: forced failure in one strategy does not suppress outputs of successful strategies.
 
 #### Pass criteria
-- [ ] Six strategy outputs are produced in normal run path.
-- [ ] Partial failure state is explicit and recoverable.
+- [x] Six strategy outputs are produced in normal run path.
+- [x] Partial failure state is explicit and recoverable.
 
 ### Task 3.2 Produce export bundle for ingestion project
-- [ ] Build final payload format expected by ingestion project.
-- [ ] Include deterministic run identifier and artifact checksums.
-- [ ] Package manifests for downstream integrity checks.
+- [x] Build final payload format expected by ingestion project.
+- [x] Include deterministic run identifier and artifact checksums.
+- [x] Package manifests for downstream integrity checks.
 
 #### Checkpoint tests
-- [ ] Bundle contract test: export payload validates against ingestion input schema.
-- [ ] Checksum reproducibility test: same input document and config produce identical checksums.
+- [x] Bundle contract test: export payload validates against ingestion input schema.
+- [x] Checksum reproducibility test: same input document and config produce identical checksums.
 
 #### Pass criteria
-- [ ] Bundle validates with zero schema errors.
-- [ ] Checksum generation is reproducible under identical inputs.
+- [x] Bundle validates with zero schema errors.
+- [x] Checksum generation is reproducible under identical inputs.
 
 ## Milestone 4: Quality Gates and Release Readiness
 
