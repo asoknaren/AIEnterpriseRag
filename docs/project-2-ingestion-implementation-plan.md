@@ -10,30 +10,30 @@ Build an ingestion service that receives chunking outputs, prepares them for sto
 ## Milestone 1: Intake and Validation
 
 ### Task 1.1 Build ingestion intake interface
-- [ ] Define accepted bundle structure from Document Transformation and Chunking Service (Project 1).
-- [ ] Implement parser and validator for document-level and artifact-level records.
-- [ ] Persist transient run state for tracking ingest sessions.
+- [x] Define accepted bundle structure from Document Transformation and Chunking Service (Project 1).
+- [x] Implement parser and validator for document-level and artifact-level records.
+- [x] Persist transient run state for tracking ingest sessions.
 
 #### Checkpoint tests
-- [ ] Intake schema test: valid Document Transformation and Chunking Service (Project 1) bundle is accepted.
-- [ ] Invalid payload test: malformed artifact entries are rejected with indexed error details.
+- [x] Intake schema test: valid Document Transformation and Chunking Service (Project 1) bundle is accepted.
+- [x] Invalid payload test: malformed artifact entries are rejected with indexed error details.
 
 #### Pass criteria
-- [ ] Valid bundles are accepted without warnings.
-- [ ] Invalid bundles return actionable validation errors.
+- [x] Valid bundles are accepted without warnings.
+- [x] Invalid bundles return actionable validation errors.
 
 ### Task 1.2 Add normalization bridge for FastAPI payloads
-- [ ] Map Document Transformation and Chunking Service (Project 1) artifact contract into FastAPI storage contract.
-- [ ] Ensure all required metadata fields are preserved.
-- [ ] Add deterministic ordering for artifact submission.
+- [x] Map Document Transformation and Chunking Service (Project 1) artifact contract into FastAPI storage contract.
+- [x] Ensure all required metadata fields are preserved.
+- [x] Add deterministic ordering for artifact submission.
 
 #### Checkpoint tests
-- [ ] Field parity test: mapped payload retains all required source metadata fields.
-- [ ] Ordering determinism test: repeated mapping produces same ordered artifact list.
+- [x] Field parity test: mapped payload retains all required source metadata fields.
+- [x] Ordering determinism test: repeated mapping produces same ordered artifact list.
 
 #### Pass criteria
-- [ ] No metadata loss occurs during mapping.
-- [ ] Ordering is stable for identical inputs.
+- [x] No metadata loss occurs during mapping.
+- [x] Ordering is stable for identical inputs.
 
 ## Milestone 2: Payload Integrity and Idempotency
 

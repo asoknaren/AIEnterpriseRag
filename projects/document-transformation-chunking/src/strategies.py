@@ -1,14 +1,16 @@
 def chunk_text_semantically(text: str, max_chars: int = 40, overlap: int = 10) -> list[str]:
     words = text.split()
     chunks = []
+    window_size = max(1, max_chars // 5)
+    overlap_words = max(0, min(window_size - 1, overlap // 5))
     start = 0
     while start < len(words):
-        end = min(len(words), start + max(1, max_chars // 5))
+        end = min(len(words), start + window_size)
         chunk = " ".join(words[start:end])
         chunks.append(chunk)
         if end >= len(words):
             break
-        start = max(0, end - overlap)
+        start = end - overlap_words
     return chunks
 
 

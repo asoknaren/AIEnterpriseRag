@@ -1,0 +1,25 @@
+{
+  "artifact_id": "a-sum-001",
+  "artifact_type": "summary",
+  "schema_version": "1.0.0",
+  "strategy_version": "1.0.0",
+  "content": "Summary artifact",
+  "document": {
+    "document_id": "doc-002",
+    "source_uri": "https://example.com/b.docx",
+    "source_type": "docx"
+  },
+  "lineage": {
+    "source_ref": "sec:overview",
+    "section_ref": "Overview"
+  },
+  "processing": {
+    "ingestion_run_id": "run-002",
+    "chunk_strategy": "summary",
+    "chunk_strategy_version": "1.0.0"
+  },
+  "extension": {
+    "summary_text": "Short concise summary",
+    "summary_length": 21
+  }
+}

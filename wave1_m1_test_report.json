@@ -1,0 +1,20 @@
+[
+  {
+    "project": "document-transformation-chunking",
+    "returncode": 1,
+    "stdout": "......F..                                                                [100%]\n================================== FAILURES ===================================\n_________________ test_semantic_chunking_respects_target_size _________________\n\n    def test_semantic_chunking_respects_target_size():\n        text = \"Alpha beta gamma delta epsilon zeta eta theta iota kappa lambda mu nu xi omicron pi rho sigma tau upsilon phi chi psi omega.\"\n    \n        chunks = chunk_text_semantically(text, max_chars=40, overlap=10)\n    \n        assert len(chunks) >= 2\n>       assert all(len(chunk) <= 40 for chunk in chunks)\nE       assert False\nE        +  where False = all(<generator object test_semantic_chunking_respects_target_size.<locals>.<genexpr> at 0x0000017E9D0E3ED0>)\n\ntests\\test_wave2_strategies.py:21: AssertionError\n=========================== short test summary info ===========================\nFAILED tests/test_wave2_strategies.py::test_semantic_chunking_respects_target_size\n1 failed, 8 passed in 0.50s\n",
+    "stderr": ""
+  },
+  {
+    "project": "fastapi-backend-vector-manager",
+    "returncode": 4,
+    "stdout": "",
+    "stderr": "ImportError while loading conftest 'C:\\NarenGitHubRepoPOCs\\AIEnterpiseRAG\\AIEnterpriseRag\\projects\\fastapi-backend-vector-manager\\tests\\conftest.py'.\ntests\\conftest.py:6: in <module>\n    from fastapi.testclient import TestClient\nE   ModuleNotFoundError: No module named 'fastapi'\n"
+  },
+  {
+    "project": "ingestion-storage-orchestration",
+    "returncode": 0,
+    "stdout": "....                                                                     [100%]\n4 passed in 0.41s\n",
+    "stderr": ""
+  }
+]

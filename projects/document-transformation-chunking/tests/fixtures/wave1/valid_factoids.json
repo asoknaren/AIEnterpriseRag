@@ -1,0 +1,25 @@
+{
+  "artifact_id": "a-fact-001",
+  "artifact_type": "factoids",
+  "schema_version": "1.0.0",
+  "strategy_version": "1.0.0",
+  "content": "Factoid record",
+  "document": {
+    "document_id": "doc-005",
+    "source_uri": "https://example.com/e.pdf",
+    "source_type": "pdf"
+  },
+  "lineage": {
+    "source_ref": "p3:l1"
+  },
+  "processing": {
+    "ingestion_run_id": "run-005",
+    "chunk_strategy": "factoids",
+    "chunk_strategy_version": "1.0.0"
+  },
+  "extension": {
+    "fact": "Capital is Paris",
+    "canonical_value": "paris",
+    "confidence": 0.95
+  }
+}

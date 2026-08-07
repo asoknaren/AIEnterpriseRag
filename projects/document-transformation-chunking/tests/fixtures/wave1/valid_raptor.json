@@ -1,0 +1,26 @@
+{
+  "artifact_id": "a-rap-001",
+  "artifact_type": "raptor",
+  "schema_version": "1.0.0",
+  "strategy_version": "1.0.0",
+  "content": "Raptor node content",
+  "document": {
+    "document_id": "doc-003",
+    "source_uri": "https://example.com/c.html",
+    "source_type": "html"
+  },
+  "lineage": {
+    "parent_artifact_id": "a-rap-root",
+    "source_ref": "tree:l1"
+  },
+  "processing": {
+    "ingestion_run_id": "run-003",
+    "chunk_strategy": "raptor",
+    "chunk_strategy_version": "1.0.0"
+  },
+  "extension": {
+    "node_id": "node-1",
+    "parent_node_id": "root",
+    "level": 1
+  }
+}

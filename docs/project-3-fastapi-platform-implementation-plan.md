@@ -10,30 +10,30 @@ Build the central FastAPI platform service that exposes CRUD and retrieval APIs,
 ## Milestone 1: Service Skeleton and Configuration
 
 ### Task 1.1 Create API skeleton and contract baseline
-- [ ] Initialize FastAPI app structure with versioned routes.
-- [ ] Define core request and response models.
-- [ ] Add common error envelope and trace identifiers.
+- [x] Initialize FastAPI app structure with versioned routes.
+- [x] Define core request and response models.
+- [x] Add common error envelope and trace identifiers.
 
 #### Checkpoint tests
-- [ ] Route discovery test verifying all baseline endpoints are registered.
-- [ ] Model validation test for required fields and error handling behavior.
+- [x] Route discovery test verifying all baseline endpoints are registered.
+- [x] Model validation test for required fields and error handling behavior.
 
 #### Pass criteria
-- [ ] Baseline routes resolve successfully.
-- [ ] Invalid request bodies return consistent validation responses.
+- [x] Baseline routes resolve successfully.
+- [x] Invalid request bodies return consistent validation responses.
 
 ### Task 1.2 Implement configuration-driven storage mode selection
-- [ ] Add configuration profiles for PostgreSQL-only, Qdrant-only, and combined mode.
-- [ ] Implement adapter selection at service startup.
-- [ ] Expose active mode through operational endpoint.
+- [x] Add configuration profiles for PostgreSQL-only, Qdrant-only, and combined mode.
+- [x] Implement adapter selection at service startup.
+- [x] Expose active mode through operational endpoint.
 
 #### Checkpoint tests
-- [ ] Startup mode test for each profile.
-- [ ] Operational status test returning active backend mode.
+- [x] Startup mode test for each profile.
+- [x] Operational status test returning active backend mode.
 
 #### Pass criteria
-- [ ] Service starts successfully in all three modes.
-- [ ] Active mode is accurately reported and logged.
+- [x] Service starts successfully in all three modes.
+- [x] Active mode is accurately reported and logged.
 
 ## Milestone 2: CRUD and Metadata Lifecycle
 

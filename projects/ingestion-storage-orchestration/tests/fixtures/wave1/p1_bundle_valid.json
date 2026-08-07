@@ -1,0 +1,36 @@
+{
+  "run_id": "run-001",
+  "document_id": "doc-001",
+  "artifacts": [
+    {
+      "artifact_id": "b-002",
+      "artifact_type": "contextual_chunk",
+      "content": "Context chunk",
+      "document_id": "doc-001",
+      "metadata": {
+        "source_uri": "https://example.com/doc.pdf",
+        "source_type": "pdf",
+        "chunk_strategy": "contextual",
+        "chunk_strategy_version": "1.0.0"
+      },
+      "lineage": {
+        "source_ref": "p1:l10"
+      }
+    },
+    {
+      "artifact_id": "a-001",
+      "artifact_type": "semantic_chunk",
+      "content": "Semantic chunk",
+      "document_id": "doc-001",
+      "metadata": {
+        "source_uri": "https://example.com/doc.pdf",
+        "source_type": "pdf",
+        "chunk_strategy": "semantic",
+        "chunk_strategy_version": "1.0.0"
+      },
+      "lineage": {
+        "source_ref": "p1:l1"
+      }
+    }
+  ]
+}

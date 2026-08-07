@@ -1,0 +1,24 @@
+{
+  "artifact_id": "a-invalid-001",
+  "artifact_type": "semantic_chunk",
+  "schema_version": "1.0.0",
+  "strategy_version": "1.0.0",
+  "content": "Invalid because document_id is missing",
+  "document": {
+    "source_uri": "https://example.com/invalid.pdf",
+    "source_type": "pdf"
+  },
+  "lineage": {
+    "source_ref": "p1:l1"
+  },
+  "processing": {
+    "ingestion_run_id": "run-x",
+    "chunk_strategy": "semantic",
+    "chunk_strategy_version": "1.0.0"
+  },
+  "extension": {
+    "token_count": 10,
+    "start_offset": 0,
+    "end_offset": 10
+  }
+}

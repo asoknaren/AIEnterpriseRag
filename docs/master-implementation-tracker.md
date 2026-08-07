@@ -27,18 +27,18 @@ This tracker links all project-level implementation plans and defines cross-proj
 ## Milestone Synchronization Plan
 
 ### Wave 1: Contract and Foundation Alignment
-- [ ] Document Transformation and Chunking Service (Project 1) Milestone 1 complete
-- [ ] FastAPI Backend Vector Manager (Project 3) Milestone 1 complete
-- [ ] Project 2 Milestone 1 complete
+- [x] Document Transformation and Chunking Service (Project 1) Milestone 1 complete
+- [x] FastAPI Backend Vector Manager (Project 3) Milestone 1 complete
+- [x] Project 2 Milestone 1 complete
 
 Exit gate:
-- [ ] Document Transformation and Chunking Service (Project 1) artifact contract and FastAPI Backend Vector Manager (Project 3) API contract are stable.
-- [ ] Project 2 can validate and map Document Transformation and Chunking Service (Project 1) output to FastAPI Backend Vector Manager (Project 3) input.
+- [x] Document Transformation and Chunking Service (Project 1) artifact contract and FastAPI Backend Vector Manager (Project 3) API contract are stable.
+- [x] Project 2 can validate and map Document Transformation and Chunking Service (Project 1) output to FastAPI Backend Vector Manager (Project 3) input.
 
 Test gate:
-- [ ] Document Transformation and Chunking Service (Project 1) contract validation tests are green.
-- [ ] FastAPI Backend Vector Manager (Project 3) route and model validation tests are green.
-- [ ] Project 2 intake schema and field parity tests are green.
+- [x] Document Transformation and Chunking Service (Project 1) contract validation tests are green.
+- [x] FastAPI Backend Vector Manager (Project 3) route and model validation tests are green.
+- [x] Project 2 intake schema and field parity tests are green.
 
 ### Wave 2: Core Processing and Persistence
 - [ ] Document Transformation and Chunking Service (Project 1) Milestone 2 complete
@@ -105,21 +105,21 @@ Test gate:
 Use this checklist to track progress by wave and project.
 
 ### Wave Status
-- [ ] Wave 1 complete
+- [x] Wave 1 complete
 - [ ] Wave 2 complete
 - [ ] Wave 3 complete
 - [ ] Wave 4 complete
 
 ### Project Milestone Status
-- [ ] Document Transformation and Chunking Service (Project 1) Milestone 1 complete
+- [x] Document Transformation and Chunking Service (Project 1) Milestone 1 complete
 - [ ] Document Transformation and Chunking Service (Project 1) Milestone 2 complete
 - [ ] Document Transformation and Chunking Service (Project 1) Milestone 3 complete
 - [ ] Document Transformation and Chunking Service (Project 1) Milestone 4 complete
-- [ ] Project 2 Milestone 1 complete
+- [x] Project 2 Milestone 1 complete
 - [ ] Project 2 Milestone 2 complete
 - [ ] Project 2 Milestone 3 complete
 - [ ] Project 2 Milestone 4 complete
-- [ ] FastAPI Backend Vector Manager (Project 3) Milestone 1 complete
+- [x] FastAPI Backend Vector Manager (Project 3) Milestone 1 complete
 - [ ] FastAPI Backend Vector Manager (Project 3) Milestone 2 complete
 - [ ] FastAPI Backend Vector Manager (Project 3) Milestone 3 complete
 - [ ] FastAPI Backend Vector Manager (Project 3) Milestone 4 complete
