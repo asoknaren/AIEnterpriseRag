@@ -6,6 +6,14 @@ create a specification document - i want to build a enterprise level RAG solutio
 
 4. RAG search - streamlit, which can call the FastAPI for vector search
 
+Chunking & creating derivative artifacts:
+
+use docling to convert RAW docs - PDF/doc/HTML to a proper markdown
+
+use chonkie to apply semantic chunking technique and create chunks for each document.
+
+for other derivative artifacts use - use ollama model runner -> onprem models -> download models llama or gemma or qwen 
+
 create a highlevel spec for the above
 
 start with a copilot plan****

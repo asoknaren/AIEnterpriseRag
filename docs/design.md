@@ -18,6 +18,7 @@ The initial system is single-tenant and local/dev-first. It is designed to suppo
 - Keep storage and model provider decisions configurable.
 - Design for reprocessing and repeatable ingestion rather than one-time indexing only.
 - Prefer provider-agnostic interfaces around embeddings and LLM-backed transformations.
+- Use Ollama as the model runner for derivative artifact generation, with on-prem models such as Llama, Gemma, or Qwen.
 
 ## High-Level Architecture
 
@@ -48,12 +49,13 @@ flowchart LR
 ```
 
 ### Project 1: Chunking and Transformation
-This project is responsible for converting source documents into multiple retrieval-ready artifacts. It owns preprocessing, chunk creation, strategy-specific transformations, and common metadata generation.
+This project is responsible for converting raw PDF, DOC/DOCX, and HTML source documents into normalized Markdown with Docling, then creating retrieval-ready artifacts with Chonkie and related transformation strategies. It owns preprocessing, chunk creation, strategy-specific transformations, and common metadata generation.
 
 Responsibilities:
 - Accept source document content and metadata.
-- Normalize and clean text before transformation.
-- Produce semantic chunks.
+- Convert source documents to Markdown using Docling.
+- Normalize and clean Markdown before transformation.
+- Produce Chonkie-based semantic chunks.
 - Produce contextual chunks.
 - Produce abstractive summaries.
 - Produce RAPTOR-style hierarchical summaries or rollups.
@@ -112,7 +114,7 @@ Expected outputs:
 
 ## End-to-End Data Flow
 1. A source document enters the chunking project.
-2. The chunking project preprocesses the content and generates all required artifact types.
+2. The chunking project converts the raw document to Markdown with Docling, then preprocesses it and generates all required artifact types using Chonkie for semantic chunking.
 3. Each derived artifact is tagged with source metadata, processing metadata, and strategy identity.
 4. The ingestion project validates the output and submits records to FastAPI.
 5. The FastAPI service writes metadata to PostgreSQL, vectors to Qdrant, or both depending on configuration.
@@ -163,7 +165,7 @@ Purpose:
 - Create concise summaries that capture the meaning of larger source sections.
 
 Design notes:
-- Typically LLM-backed.
+- Use Ollama with on-prem models such as Llama, Gemma, or Qwen.
 - Useful for high-level retrieval and compression.
 
 ### RAPTOR Outputs
@@ -171,6 +173,7 @@ Purpose:
 - Build hierarchical summaries or rollups that represent the document at multiple abstraction levels.
 
 Design notes:
+- Use Ollama with on-prem models such as Llama, Gemma, or Qwen.
 - Useful for tree-based or multi-resolution retrieval.
 - Requires parent-child relationships in metadata.
 
@@ -179,14 +182,16 @@ Purpose:
 - Generate anticipated question-answer pairs from the source content.
 
 Design notes:
+- Use Ollama with on-prem models such as Llama, Gemma, or Qwen.
 - Useful for FAQ-style retrieval and direct answer matching.
-- Likely LLM-backed and quality-sensitive.
+- Quality-sensitive and should be validated against source provenance.
 
 ### Factoids
 Purpose:
 - Extract short, atomic facts from the document.
 
 Design notes:
+- Use Ollama with on-prem models such as Llama, Gemma, or Qwen.
 - Useful for precise retrieval and structured evidence extraction.
 - May require normalization rules to avoid duplication.
 

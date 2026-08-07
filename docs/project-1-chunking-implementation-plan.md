@@ -1,10 +1,12 @@
 # Project 1 Implementation Plan: Chunking and Transformation
 
 ## Objective
-Build a document transformation service that outputs six artifact types for every ingested document: semantic chunks, contextual chunks, abstractive summaries, RAPTOR outputs, QA pairs, and factoids.
+Build a document transformation service that uses Docling to convert raw PDF, DOC/DOCX, and HTML documents into normalized Markdown, then uses Chonkie to create semantic chunks and related retrieval artifacts for every ingested document: semantic chunks, contextual chunks, abstractive summaries, RAPTOR outputs, QA pairs, and factoids.
+
+For LLM-backed derivative artifacts, the implementation shall use the Ollama model runner with on-prem models such as Llama, Gemma, or Qwen.
 
 ## Scope
-- In scope: preprocessing, strategy execution, metadata envelope, artifact versioning, deterministic pipeline stages, and strategy-level observability.
+- In scope: raw document conversion, Markdown normalization, strategy execution, metadata envelope, artifact versioning, deterministic pipeline stages, and strategy-level observability.
 - Out of scope: persistence to final storage backends, API hosting, and UI.
 
 ## Milestone 1: Contracts and Preprocessing Foundation
@@ -23,27 +25,27 @@ Pass criteria:
 1. All six valid payload samples pass schema validation.
 2. All invalid payload samples fail with deterministic error messages.
 
-### Task 1.2 Build text normalization pipeline
+### Task 1.2 Build Docling-based raw document conversion pipeline
 Subtasks:
-1. Implement encoding cleanup, whitespace normalization, and section boundary retention.
-2. Implement deterministic sentence and paragraph segmentation utilities.
-3. Preserve mapping from normalized text spans back to original positions.
+1. Implement Docling ingestion for PDF, DOC/DOCX, and HTML source files.
+2. Convert extracted content to clean Markdown while preserving headings, lists, tables, links, and basic structural cues.
+3. Preserve mapping from normalized Markdown spans back to original source positions and page/section references.
 
 Checkpoint tests:
-1. Unit tests for normalization idempotence: running normalization twice returns identical output.
-2. Span-mapping test: selected normalized spans resolve to valid source offsets.
+1. Conversion test: one sample PDF, one DOC/DOCX, and one HTML file each convert to valid Markdown.
+2. Structure preservation test: headings, list items, and tables remain identifiable in converted output.
 
 Pass criteria:
-1. Normalization idempotence test is green.
-2. Source offset mapping is correct for at least three representative document samples.
+1. All supported input formats convert successfully into Markdown.
+2. Source position mapping is correct for at least three representative document samples.
 
 ## Milestone 2: Strategy Implementations
 
-### Task 2.1 Implement semantic and contextual chunkers
+### Task 2.1 Implement Chonkie-based semantic and contextual chunkers
 Subtasks:
-1. Implement semantic chunking with target token window and overlap settings.
-2. Implement contextual chunking that adds neighboring context and section headers.
-3. Attach complete metadata envelope to both outputs.
+1. Implement Chonkie semantic chunking on normalized Markdown with target token window and overlap settings.
+2. Implement contextual chunking that adds neighboring context and section headers to semantic chunks.
+3. Attach complete metadata envelope to both outputs, including source Markdown span references.
 
 Checkpoint tests:
 1. Semantic boundary test: chunk token counts remain inside configured limits.
@@ -57,29 +59,35 @@ Pass criteria:
 Subtasks:
 1. Implement abstractive summarization stage.
 2. Implement RAPTOR hierarchical aggregation with parent-child relationships.
-3. Record strategy model/provider metadata in outputs.
+3. Integrate Ollama model runner for abstractive summary and RAPTOR generation using on-prem models such as Llama, Gemma, or Qwen.
+4. Record strategy model/provider metadata in outputs.
 
 Checkpoint tests:
 1. Hierarchy integrity test: every RAPTOR child references a valid parent or root.
 2. Summary length policy test: summaries satisfy configured length bounds.
+3. On-prem model test: configured Ollama model produces valid output for at least one supported model family.
 
 Pass criteria:
 1. RAPTOR graph has no broken parent-child links.
 2. Summary outputs satisfy min and max length policy.
+3. Ollama-backed generation works with at least one downloaded on-prem model.
 
 ### Task 2.3 Implement QA pairs and factoid extraction
 Subtasks:
 1. Generate QA pairs with provenance links to source spans.
 2. Extract factoids with deduplication strategy.
-3. Add confidence score and extraction method fields.
+3. Use Ollama model runner for QA pair and factoid generation with on-prem models such as Llama, Gemma, or Qwen.
+4. Add confidence score and extraction method fields.
 
 Checkpoint tests:
 1. QA provenance test: every answer points to at least one valid source span.
 2. Factoid dedup test: duplicate factoids are removed based on configured rule.
+3. Ollama response test: QA and factoid generation succeeds with a configured on-prem model.
 
 Pass criteria:
 1. QA pair artifacts are fully traceable to source text.
 2. Factoid output has no duplicate entries for identical canonical values.
+3. Derivative artifact generation completes successfully using Ollama and a supported on-prem model.
 
 ## Milestone 3: Orchestration and Packaging
 
