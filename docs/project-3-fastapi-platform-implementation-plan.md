@@ -107,30 +107,30 @@ Build the central FastAPI platform service that exposes CRUD and retrieval APIs,
 ## Milestone 4: Operations, Security Baseline, and Release
 
 ### Task 4.1 Implement operational endpoints and telemetry hooks
-- [ ] Add health and readiness endpoints.
-- [ ] Add ingestion status lookup endpoints.
-- [ ] Add request metrics and structured logging hooks.
+- [x] Add health and readiness endpoints.
+- [x] Add ingestion status lookup endpoints.
+- [x] Add request metrics and structured logging hooks.
 
 #### Checkpoint tests
-- [ ] Health endpoint test for service and backend dependencies.
-- [ ] Telemetry smoke test verifying logs and key metrics are emitted.
+- [x] Health endpoint test for service and backend dependencies.
+- [x] Telemetry smoke test verifying logs and key metrics are emitted.
 
 #### Pass criteria
-- [ ] Health and readiness are accurate under normal and degraded conditions.
-- [ ] Telemetry contains trace id, endpoint, latency, and outcome fields.
+- [x] Health and readiness are accurate under normal and degraded conditions.
+- [x] Telemetry contains trace id, endpoint, latency, and outcome fields.
 
 ### Task 4.2 Release candidate checkpoint
-- [ ] Publish API usage guide for Project 2 and Streamlit UI and RAG (Project 4).
-- [ ] Freeze API version for first integration release.
-- [ ] Execute interoperability suite with Project 2 ingestion and Streamlit UI and RAG (Project 4) search.
+- [x] Publish API usage guide for Project 2 and Streamlit UI and RAG (Project 4).
+- [x] Freeze API version for first integration release.
+- [x] Execute interoperability suite with Project 2 ingestion and Streamlit UI and RAG (Project 4) search.
 
 #### Checkpoint tests
-- [ ] End-to-end API interoperability test across create, search, update, and delete.
-- [ ] Mode parity test across PostgreSQL-only, Qdrant-only, and combined mode.
+- [x] End-to-end API interoperability test across create, search, update, and delete.
+- [x] Mode parity test across PostgreSQL-only, Qdrant-only, and combined mode.
 
 #### Pass criteria
-- [ ] Interoperability suite is green.
-- [ ] Mode parity matrix passes supported feature expectations.
+- [x] Interoperability suite is green.
+- [x] Mode parity matrix passes supported feature expectations.
 
 ## Exit Criteria
 1. All milestone checkpoint tests pass.

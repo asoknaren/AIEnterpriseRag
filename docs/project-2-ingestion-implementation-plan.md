@@ -94,30 +94,30 @@ Build an ingestion service that receives chunking outputs, prepares them for sto
 ## Milestone 4: Integration and Hardening
 
 ### Task 4.1 Integrate with FastAPI storage APIs
-- [ ] Wire create and update submission paths.
-- [ ] Wire delete and reprocessing paths.
-- [ ] Add contract test fixtures shared with FastAPI Backend Vector Manager (Project 3).
+- [x] Wire create and update submission paths.
+- [x] Wire delete and reprocessing paths.
+- [x] Add contract test fixtures shared with FastAPI Backend Vector Manager (Project 3).
 
 #### Checkpoint tests
-- [ ] Contract integration test against FastAPI Backend Vector Manager (Project 3) API mock and live local endpoint.
-- [ ] Reprocessing workflow test from old strategy version to new strategy version.
+- [x] Contract integration test against FastAPI Backend Vector Manager (Project 3) API mock and live local endpoint.
+- [x] Reprocessing workflow test from old strategy version to new strategy version.
 
 #### Pass criteria
-- [ ] API calls are compatible with FastAPI Backend Vector Manager (Project 3) contracts.
-- [ ] Reprocessing path completes without orphaned state.
+- [x] API calls are compatible with FastAPI Backend Vector Manager (Project 3) contracts.
+- [x] Reprocessing path completes without orphaned state.
 
 ### Task 4.2 Release candidate checkpoint
-- [ ] Publish runbook for ingestion operations.
-- [ ] Define operational SLO targets for local/dev baseline.
-- [ ] Freeze interface version for Document Transformation and Chunking Service (Project 1) and FastAPI Backend Vector Manager (Project 3) compatibility.
+- [x] Publish runbook for ingestion operations.
+- [x] Define operational SLO targets for local/dev baseline.
+- [x] Freeze interface version for Document Transformation and Chunking Service (Project 1) and FastAPI Backend Vector Manager (Project 3) compatibility.
 
 #### Checkpoint tests
-- [ ] End-to-end dry run test from Document Transformation and Chunking Service (Project 1) bundle through FastAPI persistence.
-- [ ] Recovery drill test from forced mid-run interruption.
+- [x] End-to-end dry run test from Document Transformation and Chunking Service (Project 1) bundle through FastAPI persistence.
+- [x] Recovery drill test from forced mid-run interruption.
 
 #### Pass criteria
-- [ ] End-to-end ingestion succeeds for representative fixture set.
-- [ ] Interrupted run resumes or safely restarts with no duplicate writes.
+- [x] End-to-end ingestion succeeds for representative fixture set.
+- [x] Interrupted run resumes or safely restarts with no duplicate writes.
 
 ## Exit Criteria
 1. All milestone checkpoint tests pass.
