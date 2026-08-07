@@ -220,7 +220,14 @@ def attach_metadata_envelope(
 ) -> list[dict[str, Any]]:
     payloads: list[dict[str, Any]] = []
     for item in artifacts:
-        artifact_text = item.get("chunk") or item.get("summary") or item.get("fact") or item.get("answer") or ""
+        artifact_text = (
+            item.get("chunk")
+            or item.get("summary")
+            or item.get("fact")
+            or item.get("answer")
+            or item.get("content")
+            or ""
+        )
         artifact_id = item.get("artifact_id") or f"{document_id}-{strategy}-{sha256(artifact_text.encode('utf-8')).hexdigest()[:12]}"
         payloads.append(
             {

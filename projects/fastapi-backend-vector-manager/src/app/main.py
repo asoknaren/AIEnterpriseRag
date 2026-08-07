@@ -8,12 +8,16 @@ from fastapi.responses import JSONResponse
 
 from app.api.v1.routes_artifacts import router as artifacts_router
 from app.api.v1.routes_documents import router as documents_router
+from app.api.v1.routes_embedding import router as embedding_router
 from app.api.v1.routes_ops import router as ops_router
+from app.api.v1.routes_search import router as search_router
 from app.config.settings import AppSettings
+from app.embedding.provider import DeterministicEmbeddingProvider
 from app.models.errors import ErrorEnvelope
 from app.runtime.mode_selector import select_adapters
 from app.storage.in_memory_db import InMemoryDatabase
 from app.storage.repository import Repository
+from app.vector.qdrant_adapter import InMemoryQdrantAdapter
 
 
 def create_app() -> FastAPI:
@@ -24,9 +28,14 @@ def create_app() -> FastAPI:
     app.state.adapters = select_adapters(settings.profile)
     app.state.db = InMemoryDatabase()
     app.state.repository = Repository(app.state.db)
+    app.state.embedding_provider = DeterministicEmbeddingProvider()
+    app.state.vector_adapter = InMemoryQdrantAdapter()
+    app.state.vector_adapter.initialize_collection("artifacts")
 
     app.include_router(documents_router)
     app.include_router(artifacts_router)
+    app.include_router(embedding_router)
+    app.include_router(search_router)
     app.include_router(ops_router)
 
     @app.exception_handler(RequestValidationError)

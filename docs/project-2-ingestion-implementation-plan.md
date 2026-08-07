@@ -66,30 +66,30 @@ Build an ingestion service that receives chunking outputs, prepares them for sto
 ## Milestone 3: Reliability and Observability
 
 ### Task 3.1 Implement retry and dead-letter policy
-- [ ] Add transient failure retry with bounded exponential backoff.
-- [ ] Separate retryable and non-retryable API errors.
-- [ ] Store failed records in dead-letter queue structure for operator review.
+- [x] Add transient failure retry with bounded exponential backoff.
+- [x] Separate retryable and non-retryable API errors.
+- [x] Store failed records in dead-letter queue structure for operator review.
 
 #### Checkpoint tests
-- [ ] Retry behavior test with simulated transient 5xx responses.
-- [ ] Dead-letter routing test with simulated hard validation failure.
+- [x] Retry behavior test with simulated transient 5xx responses.
+- [x] Dead-letter routing test with simulated hard validation failure.
 
 #### Pass criteria
-- [ ] Transient failures recover within retry budget when backend recovers.
-- [ ] Non-retryable failures are captured in dead-letter store with full context.
+- [x] Transient failures recover within retry budget when backend recovers.
+- [x] Non-retryable failures are captured in dead-letter store with full context.
 
 ### Task 3.2 Implement run status and metrics
-- [ ] Track run lifecycle states: started, in-progress, partial-failed, completed, failed.
-- [ ] Emit counters for accepted, rejected, retried, and persisted artifacts.
-- [ ] Emit timing metrics for parse, validate, submit, and total run duration.
+- [x] Track run lifecycle states: started, in-progress, partial-failed, completed, failed.
+- [x] Emit counters for accepted, rejected, retried, and persisted artifacts.
+- [x] Emit timing metrics for parse, validate, submit, and total run duration.
 
 #### Checkpoint tests
-- [ ] Lifecycle transition test for success and partial-failure runs.
-- [ ] Metrics emission test verifying expected counters and durations are present.
+- [x] Lifecycle transition test for success and partial-failure runs.
+- [x] Metrics emission test verifying expected counters and durations are present.
 
 #### Pass criteria
-- [ ] Lifecycle states transition correctly.
-- [ ] Metrics are emitted consistently for every run.
+- [x] Lifecycle states transition correctly.
+- [x] Metrics are emitted consistently for every run.
 
 ## Milestone 4: Integration and Hardening
 
