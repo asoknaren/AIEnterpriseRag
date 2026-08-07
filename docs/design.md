@@ -26,7 +26,7 @@ The following diagram shows the core components, data paths, and control paths a
 
 ```mermaid
 flowchart LR
-	U[Operators and Developers] --> C[Project 1: Chunking and Transformation]
+	U[Operators and Developers] --> C[Document Transformation and Chunking Service (Project 1)]
 	D[(Source Documents)] --> C
 
 	C -->|semantic chunks| I[Project 2: Ingestion and Storage Orchestration]
@@ -36,19 +36,19 @@ flowchart LR
 	C -->|QA pairs| I
 	C -->|factoids| I
 
-	I -->|create and update artifacts| A[Project 3: FastAPI Platform Service]
+	I -->|create and update artifacts| A[FastAPI Backend Vector Manager (Project 3)]
 	I -->|ingestion status and retries| A
 
 	A -->|metadata CRUD| P[(PostgreSQL)]
 	A -->|vector upsert and search payloads| Q[(Qdrant)]
 
-	S[Project 4: Streamlit Search Application] -->|search and filter requests| A
+	S[Streamlit UI and RAG (Project 4)] -->|search and filter requests| A
 	A -->|ranked results with provenance| S
 
 	A -->|health and config endpoints| U
 ```
 
-### Project 1: Chunking and Transformation
+### Document Transformation and Chunking Service (Project 1)
 This project is responsible for converting raw PDF, DOC/DOCX, and HTML source documents into normalized Markdown with Docling, then creating retrieval-ready artifacts with Chonkie and related transformation strategies. It owns preprocessing, chunk creation, strategy-specific transformations, and common metadata generation.
 
 Responsibilities:
@@ -82,7 +82,7 @@ Expected outputs:
 - Persisted records in relational and/or vector backends.
 - Operational status records for success, failure, retry, and completion.
 
-### Project 3: FastAPI Platform Service
+### FastAPI Backend Vector Manager (Project 3)
 This service is the control plane for persistence and retrieval behavior. It exposes CRUD operations and abstracts backend choices through configuration.
 
 Responsibilities:
@@ -98,7 +98,7 @@ Expected outputs:
 - Stable service contracts for ingestion and search clients.
 - Consistent document lifecycle operations across supported backends.
 
-### Project 4: Streamlit Search Application
+### Streamlit UI and RAG (Project 4)
 This project provides a lightweight user experience for validating search quality and demonstrating the platform.
 
 Responsibilities:
