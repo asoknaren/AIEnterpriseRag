@@ -38,30 +38,30 @@ Build the central FastAPI platform service that exposes CRUD and retrieval APIs,
 ## Milestone 2: CRUD and Metadata Lifecycle
 
 ### Task 2.1 Implement document and artifact CRUD
-- [ ] Implement create and read operations.
-- [ ] Implement update operations with optimistic version checks.
-- [ ] Implement delete operations with cascading artifact behavior.
+- [x] Implement create and read operations.
+- [x] Implement update operations with optimistic version checks.
+- [x] Implement delete operations with cascading artifact behavior.
 
 #### Checkpoint tests
-- [ ] CRUD contract test for create, read, update, and delete paths.
-- [ ] Version conflict test for stale update requests.
+- [x] CRUD contract test for create, read, update, and delete paths.
+- [x] Version conflict test for stale update requests.
 
 #### Pass criteria
-- [ ] CRUD operations satisfy contract responses across configured modes.
-- [ ] Version conflicts are detected and handled with explicit error codes.
+- [x] CRUD operations satisfy contract responses across configured modes.
+- [x] Version conflicts are detected and handled with explicit error codes.
 
 ### Task 2.2 Implement metadata persistence adapter for PostgreSQL
-- [ ] Implement relational writes for documents and artifacts.
-- [ ] Implement status and audit metadata persistence.
-- [ ] Add transactional boundaries for multi-record operations.
+- [x] Implement relational writes for documents and artifacts.
+- [x] Implement status and audit metadata persistence.
+- [x] Add transactional boundaries for multi-record operations.
 
 #### Checkpoint tests
-- [ ] Transaction integrity test with forced mid-transaction error.
-- [ ] Read-after-write consistency test for metadata retrieval.
+- [x] Transaction integrity test with forced mid-transaction error.
+- [x] Read-after-write consistency test for metadata retrieval.
 
 #### Pass criteria
-- [ ] Failed transactions rollback cleanly.
-- [ ] Metadata retrieval reflects committed writes accurately.
+- [x] Failed transactions rollback cleanly.
+- [x] Metadata retrieval reflects committed writes accurately.
 
 ## Milestone 3: Embedding Pipeline, Vector Retrieval, and Search APIs
 

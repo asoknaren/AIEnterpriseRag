@@ -38,30 +38,30 @@ Build an ingestion service that receives chunking outputs, prepares them for sto
 ## Milestone 2: Payload Integrity and Idempotency
 
 ### Task 2.1 Finalize payload handoff contract for FastAPI-owned embeddings
-- [ ] Define payload contract where raw text and metadata are sent to FastAPI for embedding generation.
-- [ ] Add strict field-level validation for artifact text, strategy metadata, and lineage metadata.
-- [ ] Add payload-size guardrails and chunk batching rules for FastAPI submission.
+- [x] Define payload contract where raw text and metadata are sent to FastAPI for embedding generation.
+- [x] Add strict field-level validation for artifact text, strategy metadata, and lineage metadata.
+- [x] Add payload-size guardrails and chunk batching rules for FastAPI submission.
 
 #### Checkpoint tests
-- [ ] Contract compliance test: payload accepted by FastAPI Backend Vector Manager (Project 3) input models without transformation errors.
-- [ ] Batch boundary test for minimum and maximum submission sizes.
+- [x] Contract compliance test: payload accepted by FastAPI Backend Vector Manager (Project 3) input models without transformation errors.
+- [x] Batch boundary test for minimum and maximum submission sizes.
 
 #### Pass criteria
-- [ ] Payload is accepted by FastAPI contract and contains no embedding fields.
-- [ ] Submission batching respects configured limits.
+- [x] Payload is accepted by FastAPI contract and contains no embedding fields.
+- [x] Submission batching respects configured limits.
 
 ### Task 2.2 Implement idempotent write strategy
-- [ ] Define idempotency key using document id, strategy, and artifact checksum.
-- [ ] Add duplicate detection before FastAPI submission.
-- [ ] Add conflict handling for stale or changed artifacts.
+- [x] Define idempotency key using document id, strategy, and artifact checksum.
+- [x] Add duplicate detection before FastAPI submission.
+- [x] Add conflict handling for stale or changed artifacts.
 
 #### Checkpoint tests
-- [ ] Replay test: submitting same bundle twice results in no duplicate active records.
-- [ ] Change detection test: modified artifact content is detected and routed to update path.
+- [x] Replay test: submitting same bundle twice results in no duplicate active records.
+- [x] Change detection test: modified artifact content is detected and routed to update path.
 
 #### Pass criteria
-- [ ] Replay path is idempotent.
-- [ ] Changed artifacts are correctly upserted.
+- [x] Replay path is idempotent.
+- [x] Changed artifacts are correctly upserted.
 
 ## Milestone 3: Reliability and Observability
 

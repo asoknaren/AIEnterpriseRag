@@ -41,19 +41,19 @@ Test gate:
 - [x] Project 2 intake schema and field parity tests are green.
 
 ### Wave 2: Core Processing and Persistence
-- [ ] Document Transformation and Chunking Service (Project 1) Milestone 2 complete
-- [ ] FastAPI Backend Vector Manager (Project 3) Milestone 2 complete
-- [ ] Project 2 Milestone 2 complete
+- [x] Document Transformation and Chunking Service (Project 1) Milestone 2 complete
+- [x] FastAPI Backend Vector Manager (Project 3) Milestone 2 complete
+- [x] Project 2 Milestone 2 complete
 
 Exit gate:
-- [ ] Document Transformation and Chunking Service (Project 1) emits complete strategy outputs.
-- [ ] Project 2 performs idempotent submission without embeddings.
-- [ ] FastAPI Backend Vector Manager (Project 3) performs CRUD and metadata lifecycle behavior.
+- [x] Document Transformation and Chunking Service (Project 1) emits complete strategy outputs.
+- [x] Project 2 performs idempotent submission without embeddings.
+- [x] FastAPI Backend Vector Manager (Project 3) performs CRUD and metadata lifecycle behavior.
 
 Test gate:
-- [ ] Document Transformation and Chunking Service (Project 1) strategy-level tests are green.
-- [ ] Project 2 replay and change-detection tests are green.
-- [ ] FastAPI Backend Vector Manager (Project 3) CRUD and transaction integrity tests are green.
+- [x] Document Transformation and Chunking Service (Project 1) strategy-level tests are green.
+- [x] Project 2 replay and change-detection tests are green.
+- [x] FastAPI Backend Vector Manager (Project 3) CRUD and transaction integrity tests are green.
 
 ### Wave 3: Search Readiness and Reliability
 - [ ] Document Transformation and Chunking Service (Project 1) Milestone 3 complete
@@ -106,21 +106,21 @@ Use this checklist to track progress by wave and project.
 
 ### Wave Status
 - [x] Wave 1 complete
-- [ ] Wave 2 complete
+- [x] Wave 2 complete
 - [ ] Wave 3 complete
 - [ ] Wave 4 complete
 
 ### Project Milestone Status
 - [x] Document Transformation and Chunking Service (Project 1) Milestone 1 complete
-- [ ] Document Transformation and Chunking Service (Project 1) Milestone 2 complete
+- [x] Document Transformation and Chunking Service (Project 1) Milestone 2 complete
 - [ ] Document Transformation and Chunking Service (Project 1) Milestone 3 complete
 - [ ] Document Transformation and Chunking Service (Project 1) Milestone 4 complete
 - [x] Project 2 Milestone 1 complete
-- [ ] Project 2 Milestone 2 complete
+- [x] Project 2 Milestone 2 complete
 - [ ] Project 2 Milestone 3 complete
 - [ ] Project 2 Milestone 4 complete
 - [x] FastAPI Backend Vector Manager (Project 3) Milestone 1 complete
-- [ ] FastAPI Backend Vector Manager (Project 3) Milestone 2 complete
+- [x] FastAPI Backend Vector Manager (Project 3) Milestone 2 complete
 - [ ] FastAPI Backend Vector Manager (Project 3) Milestone 3 complete
 - [ ] FastAPI Backend Vector Manager (Project 3) Milestone 4 complete
 - [ ] Streamlit UI and RAG (Project 4) Milestone 1 complete

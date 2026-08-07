@@ -40,49 +40,49 @@ For LLM-backed derivative artifacts, the implementation shall use the Ollama mod
 ## Milestone 2: Strategy Implementations
 
 ### Task 2.1 Implement Chonkie-based semantic and contextual chunkers
-- [ ] Implement Chonkie semantic chunking on normalized Markdown with target token window and overlap settings.
-- [ ] Implement contextual chunking that adds neighboring context and section headers to semantic chunks.
-- [ ] Attach complete metadata envelope to both outputs, including source Markdown span references.
+- [x] Implement Chonkie semantic chunking on normalized Markdown with target token window and overlap settings.
+- [x] Implement contextual chunking that adds neighboring context and section headers to semantic chunks.
+- [x] Attach complete metadata envelope to both outputs, including source Markdown span references.
 
 #### Checkpoint tests
-- [ ] Semantic boundary test: chunk token counts remain inside configured limits.
-- [ ] Context augmentation test: each contextual chunk includes expected adjacency fields.
+- [x] Semantic boundary test: chunk token counts remain inside configured limits.
+- [x] Context augmentation test: each contextual chunk includes expected adjacency fields.
 
 #### Pass criteria
-- [ ] All generated chunks meet token constraints.
-- [ ] Context fields are present and non-empty for contextual artifacts.
+- [x] All generated chunks meet token constraints.
+- [x] Context fields are present and non-empty for contextual artifacts.
 
 ### Task 2.2 Implement abstractive summary and RAPTOR strategies
-- [ ] Implement abstractive summarization stage.
-- [ ] Implement RAPTOR hierarchical aggregation with parent-child relationships.
-- [ ] Integrate Ollama model runner for abstractive summary and RAPTOR generation using on-prem models such as Llama, Gemma, or Qwen.
-- [ ] Record strategy model/provider metadata in outputs.
+- [x] Implement abstractive summarization stage.
+- [x] Implement RAPTOR hierarchical aggregation with parent-child relationships.
+- [x] Integrate Ollama model runner for abstractive summary and RAPTOR generation using on-prem models such as Llama, Gemma, or Qwen.
+- [x] Record strategy model/provider metadata in outputs.
 
 #### Checkpoint tests
-- [ ] Hierarchy integrity test: every RAPTOR child references a valid parent or root.
-- [ ] Summary length policy test: summaries satisfy configured length bounds.
-- [ ] On-prem model test: configured Ollama model produces valid output for at least one supported model family.
+- [x] Hierarchy integrity test: every RAPTOR child references a valid parent or root.
+- [x] Summary length policy test: summaries satisfy configured length bounds.
+- [x] On-prem model test: configured Ollama model produces valid output for at least one supported model family.
 
 #### Pass criteria
-- [ ] RAPTOR graph has no broken parent-child links.
-- [ ] Summary outputs satisfy min and max length policy.
-- [ ] Ollama-backed generation works with at least one downloaded on-prem model.
+- [x] RAPTOR graph has no broken parent-child links.
+- [x] Summary outputs satisfy min and max length policy.
+- [x] Ollama-backed generation works with at least one downloaded on-prem model.
 
 ### Task 2.3 Implement QA pairs and factoid extraction
-- [ ] Generate QA pairs with provenance links to source spans.
-- [ ] Extract factoids with deduplication strategy.
-- [ ] Use Ollama model runner for QA pair and factoid generation with on-prem models such as Llama, Gemma, or Qwen.
-- [ ] Add confidence score and extraction method fields.
+- [x] Generate QA pairs with provenance links to source spans.
+- [x] Extract factoids with deduplication strategy.
+- [x] Use Ollama model runner for QA pair and factoid generation with on-prem models such as Llama, Gemma, or Qwen.
+- [x] Add confidence score and extraction method fields.
 
 #### Checkpoint tests
-- [ ] QA provenance test: every answer points to at least one valid source span.
-- [ ] Factoid dedup test: duplicate factoids are removed based on configured rule.
-- [ ] Ollama response test: QA and factoid generation succeeds with a configured on-prem model.
+- [x] QA provenance test: every answer points to at least one valid source span.
+- [x] Factoid dedup test: duplicate factoids are removed based on configured rule.
+- [x] Ollama response test: QA and factoid generation succeeds with a configured on-prem model.
 
 #### Pass criteria
-- [ ] QA pair artifacts are fully traceable to source text.
-- [ ] Factoid output has no duplicate entries for identical canonical values.
-- [ ] Derivative artifact generation completes successfully using Ollama and a supported on-prem model.
+- [x] QA pair artifacts are fully traceable to source text.
+- [x] Factoid output has no duplicate entries for identical canonical values.
+- [x] Derivative artifact generation completes successfully using Ollama and a supported on-prem model.
 
 ## Milestone 3: Orchestration and Packaging
 
