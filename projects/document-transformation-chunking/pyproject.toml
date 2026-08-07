@@ -1,0 +1,16 @@
+[project]
+name = "document-transformation-chunking"
+version = "0.1.0"
+description = "Document transformation and chunking service for the Enterprise RAG platform"
+requires-python = ">=3.10"
+dependencies = [
+  "pydantic>=2.0",
+  "pytest>=8.0"
+]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
