@@ -12,6 +12,8 @@ from app.api.v1.routes_ops import router as ops_router
 from app.config.settings import AppSettings
 from app.models.errors import ErrorEnvelope
 from app.runtime.mode_selector import select_adapters
+from app.storage.in_memory_db import InMemoryDatabase
+from app.storage.repository import Repository
 
 
 def create_app() -> FastAPI:
@@ -20,6 +22,8 @@ def create_app() -> FastAPI:
     app = FastAPI(title="FastAPI Backend Vector Manager", version="0.1.0")
     app.state.active_mode = settings.profile
     app.state.adapters = select_adapters(settings.profile)
+    app.state.db = InMemoryDatabase()
+    app.state.repository = Repository(app.state.db)
 
     app.include_router(documents_router)
     app.include_router(artifacts_router)
