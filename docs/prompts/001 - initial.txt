@@ -16,4 +16,6 @@ for other derivative artifacts use - use ollama model runner -> onprem models ->
 
 create a highlevel spec for the above
 
+Ask me more clarifying questions***
+
 start with a copilot plan****

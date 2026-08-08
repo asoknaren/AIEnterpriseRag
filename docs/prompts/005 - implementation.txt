@@ -1,3 +1,10 @@
+implementation plan:
+
+this is for our notes - not for execution
+
+ask copilot to provide, what is the best way to implement?? to get clarity
+==================================================================================
+
 Use master-implementation-tracker.md as your execution controller.
 
 How to use it:
