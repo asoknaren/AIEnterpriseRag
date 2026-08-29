@@ -26,23 +26,23 @@ The following diagram shows the core components, data paths, and control paths a
 
 ```mermaid
 flowchart LR
-	U[Operators and Developers] --> C[Document Transformation and Chunking Service (Project 1)]
+	U[Operators and Developers] --> C["Document Transformation and Chunking Service (Project 1)"]
 	D[(Source Documents)] --> C
 
-	C -->|semantic chunks| I[Project 2: Ingestion and Storage Orchestration]
+	C -->|semantic chunks| I["Project 2: Ingestion and Storage Orchestration"]
 	C -->|contextual chunks| I
 	C -->|abstractive summaries| I
 	C -->|RAPTOR outputs| I
 	C -->|QA pairs| I
 	C -->|factoids| I
 
-	I -->|create and update artifacts| A[FastAPI Backend Vector Manager (Project 3)]
+	I -->|create and update artifacts| A["FastAPI Backend Vector Manager (Project 3)"]
 	I -->|ingestion status and retries| A
 
 	A -->|metadata CRUD| P[(PostgreSQL)]
 	A -->|vector upsert and search payloads| Q[(Qdrant)]
 
-	S[Streamlit UI and RAG (Project 4)] -->|search and filter requests| A
+	S["Streamlit UI and RAG (Project 4)"] -->|search and filter requests| A
 	A -->|ranked results with provenance| S
 
 	A -->|health and config endpoints| U
